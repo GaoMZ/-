@@ -6,6 +6,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.text.format.Time;
 import android.accounts.Account;
 import android.accounts.OnAccountsUpdateListener;
+import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.DatePickerDialog.OnDateSetListener;
 import android.app.TimePickerDialog;
@@ -19,7 +20,9 @@ import android.widget.DatePicker.OnDateChangedListener;
 import android.widget.TimePicker;
 import android.widget.TimePicker.OnTimeChangedListener;
 
-public class MainActivity extends ActionBarActivity {
+import com.example.datetimepicker.*;
+
+public class MainActivity extends  ActionBarActivity{
 
 	private DatePicker datePicker;
 	private	TimePicker timePicker;
@@ -89,27 +92,5 @@ public class MainActivity extends ActionBarActivity {
 		}
 	}, hour, minute, true).show();
 	
-	}
-	
-	
-	
-	
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
-	}
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
 	}
 }
